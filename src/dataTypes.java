@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class dataTypes {
     public static void main(String args[]) {
@@ -30,7 +30,7 @@ public class dataTypes {
          * 
          */
 
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
         /**
          * String str = sc.next(); // take until space
          * System.out.println(str);
@@ -55,9 +55,48 @@ public class dataTypes {
          * float area = 3.1416f * rad * rad;
          * System.out.println(area);
          */
-        float tc = sc.nextInt();
-        System.out.println(tc);
-        int a = 'a', b = 'b';
-        System.out.println(a + " " + b);
+        /**
+         * 
+         * float tc = sc.nextInt();
+         * System.out.println(tc);
+         * int a = 'a', b = 'b';
+         * System.out.println(a + " " + b);
+         */
+        /**
+         * 
+         * char a = 'a';
+         * char b = 'b';
+         * char c = (char) (b - a); // error
+         * System.out.println((int) a);
+         * System.out.println((int) b);
+         * System.out.println(b - a);
+         * System.out.println(c); // i think there is no icon for this number
+         */
+        /**
+         * 
+         * short a = 2;
+         * byte b = 4;
+         * char c = 's';
+         * byte d = (byte) (a + b + c);
+         * char e = (char) (a + b + c);
+         * int f = a + b + c;
+         * System.out.println(f);
+         */
+        /**
+         * 
+         * int a = 111;
+         * float b = 34.33f;
+         * long f = 44;
+         * double c = 33.33;
+         * double sum = a + b + c + f;
+         * int ans = (int) (a + b + c + f);
+         * System.out.println(ans);
+         */
+        /**
+         * 
+         * byte b = 4;
+         * byte a = (byte) (b * 2);
+         * System.out.println(a);
+         */
     }
 }
