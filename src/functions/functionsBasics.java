@@ -19,7 +19,7 @@ public class functionsBasics {
     }
 
     public static float calculateSum(float a, float b) {// parameters
-        return a + b;
+        return a + b; 
     }
 
     public static int multiply(int a, int b) {
