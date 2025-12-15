@@ -2,6 +2,7 @@ import java.util.*;
 
 public class dataTypes {
     public static void main(String args[]) {
+        System.out.print("nafis");
         /**
          * System.out.println("****");
          * System.out.println("***");
