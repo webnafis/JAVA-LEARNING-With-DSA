@@ -14,7 +14,7 @@ class DoubleLL{
     public static Node head;
     public static Node tail;
     public static int size;
-
+// return the value when adding or removing a node
     public void addLast(int data){
         Node newNode = new Node(data);
         if(head==null){
