@@ -66,6 +66,77 @@ class Basic{
         }
     }
 
+    static class StackQ{
+        static Queue<Integer> q1 = new ArrayDeque<>();
+        static Queue<Integer> q2 = new ArrayDeque<>();
+
+        public static boolean isEmpty(){
+            return q1.isEmpty() && q2.isEmpty();
+        }
+
+        public static void push(int data){
+            if(q1.isEmpty()){
+                q1.add(data);
+                while(!q2.isEmpty()){
+                    q1.add(q2.remove());
+                }
+            }else{
+                q2.add(data);
+                while(!q1.isEmpty()){
+                    q2.add(q1.remove());
+                }
+            }
+            
+        }
+
+        public static int peek(){
+            if(isEmpty()){
+                System.out.println("empty stack");
+                return -1;
+            }
+            return q1.isEmpty()? q2.peek(): q1.peek();
+        }
+
+        public static int pop(){
+            if(isEmpty()){
+                System.out.println("empty stack");
+                return -1;
+            }
+            return q1.isEmpty()? q2.remove(): q1.remove();
+        }
+
+    }
+
+    static class StackD{
+        static Deque<Integer> d = new LinkedList<>();
+
+        public static boolean isEmpty(){
+            return d.isEmpty();
+        }
+
+        public static void push(int data){
+            d.addFirst(data);
+            
+        }
+
+        public static int peek(){
+            if(isEmpty()){
+                System.out.println("empty stack");
+                return -1;
+            }
+            return d.getFirst();
+        }
+
+        public static int pop(){
+            if(isEmpty()){
+                System.out.println("empty stack");
+                return -1;
+            }
+            return d.removeFirst();
+        }
+
+    }
+
     public static void main(String[] args){
         // Stackll stack= new Stackll();
         // stack.push(1);
@@ -76,15 +147,35 @@ class Basic{
         // stack.pop();
         // }
         // System.out.println("salam......");
-        Stack<Integer> stack= new Stack<>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
+        // Stack<Integer> stack= new Stack<>();
+        // stack.push(1);
+        // stack.push(2);
+        // stack.push(3);
         // while(!stack.isEmpty()){
         // System.out.println(stack.peek());
         // stack.pop();
         // }
         // System.out.println("salam......");
+
+        // StackQ stack= new StackQ();
+        // stack.push(1);
+        // stack.push(2);
+        // stack.push(3);
+        // while(!stack.isEmpty()){
+        // System.out.println(stack.peek());
+        // stack.pop();
+        // }
+        // System.out.println("salam......");
+
+        StackD stack= new StackD();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        while(!stack.isEmpty()){
+        System.out.println(stack.peek());
+        stack.pop();
+        }
+        System.out.println("salam......");
 
     }
 }
